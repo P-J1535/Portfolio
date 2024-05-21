@@ -1,0 +1,75 @@
+.contactUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 2rem;
+    height: 100vh;
+}
+
+.imageSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contactImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.formSection {
+    width: 100%;
+    padding: 2rem;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formSection>form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formSection>form>input, 
+.formSection>form>textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formSection>form>button {
+    padding: 0.75rem 1.5rem;
+    background-color: #f39c12;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.formSection button:hover {
+    background-color: #e67e22;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .contactUs {
+        flex-direction: row;
+    }
+
+    .imageSection, .formSection {
+        flex: 1;
+    }
+
+    .imageSection {
+        margin-bottom: 0;
+        padding-right: 2rem;
+    }
+}

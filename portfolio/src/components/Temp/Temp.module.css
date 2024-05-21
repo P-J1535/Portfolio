@@ -9,11 +9,8 @@
     position: relative; /* Added for mobile responsiveness */
   }
   
-  /* .navbarLogo {
+  .navbarLogo {
     font-size: 1.5rem;
-  } */
-  .aa{
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
   
   .navbarMenu {
@@ -23,39 +20,15 @@
     padding: 0;
   }
   
-  .navbarMenu>li {
+  .navbarMenu li {
     margin-right: 1rem;
   }
   
-  .navbarMenu>li>a {
+  .navbarMenu a {
     color: #333;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    position: relative; /* Added for the underline effect */
   }
-  
-/* Change color on hover */
-  /* .navbarMenu a:hover {
-    color: #007bff; 
-  } */
-  
-  .navbarMenu>li>a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: transparent; /* Initially transparent */
-    transition: background-color 0.3s ease-in-out; /* Added transition effect */
-  }
-  
-  .navbarMenu>li>a:hover::after {
-    background-color: #007bff; /* Change background color on hover */
-
-}
-
-  
   
   .navbarToggle {
     display: none;
@@ -72,7 +45,7 @@
 
   }
   
-  .hamburger>span {
+  .hamburger span {
     display: block;
     width: 100%;
     height: 2px;
@@ -97,14 +70,11 @@
       background-color: #ffff;
       position: absolute;
       box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
-      top: 64px;
-      left: 0%; 
-      width: 30%; 
+      top: 70px;
+      left: 80%; 
+      width: 100%; 
       z-index: 10;
       justify-content: flex-end;
-      gap: 30px;
-      padding: 20px 0px;
-      border-radius: 4px;
     }
   
     .navbarMenu.active {
