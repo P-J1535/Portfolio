@@ -8,10 +8,12 @@ import NavbarLite from './components/NavbarLite/NavbarLite';
 const App = () => {
   return (
     <BrowserRouter>
+  
       <Routes>
-        <Route path='/' element={<NavbarLite /> } />
-         
+        <Route index element={<Resume /> } />
+         <Route path='/cv' element={<CV />} />
       </Routes>
+       
     </BrowserRouter>
   );
 };
