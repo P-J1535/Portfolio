@@ -27,12 +27,12 @@
     text-align: left;
   }
   
-  .card h2 {
+  .card>h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
   }
   
-  .card p {
+  .card>p {
     font-size: 1em;
   }
   
@@ -52,10 +52,10 @@
   }
   
   body {
-    overflow: hidden; /* Hide the scrollbar */
+    overflow: hidden; 
   }
   
   iframe {
-    overflow: hidden; /* Ensure the iframe itself does not show scrollbars */
+    overflow: hidden;
   }
   

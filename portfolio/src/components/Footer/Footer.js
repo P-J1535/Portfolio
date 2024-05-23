@@ -38,9 +38,9 @@ const Footer = () => {
         <div className={styles.column}>
           <h3>Have a Questions?</h3>
           <ul>
-            <li><LocationOn /> 203 Fake St. Mountain View, San Francisco, California, USA</li>
-            <li><Phone /> +2 392 3929 210</li>
-            <li><Email /> info@yourdomain.com</li>
+            <li><LocationOn /> Kharghar, Navi Mumbai</li>
+            <li><Phone /> +91 8451031535</li>
+            <li><Email /> prathameshjepal97@gmail.com</li>
           </ul>
         </div>
       </div>

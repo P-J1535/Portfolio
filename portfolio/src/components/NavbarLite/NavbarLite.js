@@ -1,27 +1,25 @@
-import React from 'react';
+import React from 'react'
 import styles from './NavbarLite.module.css'
-
 
 const NavbarLite = () => {
     return (
         <div className={styles.navbar}>
-            <div className={styles.navbarLogo}>
-                <p>Your Logo</p>
+            <div>
+                <img src="" alt="CompnayLogo" />
             </div>
-            <ul className={styles.menuItem}>
-                <li><a href="">Home</a></li>
-                <li><a href="">Home</a></li>
-                <li><a href="">Home</a></li>
-                <li><a href="">Home</a></li>
+            <ul className={styles.navbarMenu}>
+            <li>Home</li>
+            <li>about </li>
+            <li></li>
+            <li></li>
+            
             </ul>
-            <div className={styles.toggleNavbar}>
-                <div className={styles.hamburger}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+            <div>
+
             </div>
+
         </div>
     )
 }
+
 export default NavbarLite
