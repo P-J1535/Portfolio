@@ -19,12 +19,12 @@
     margin: 20px;
   }
   
-  h3 {
+  .column>h3 {
     margin-bottom: 20px;
     font-size: 18px;
   }
   
-  p {
+  .column>p {
     margin-bottom: 20px;
     line-height: 1.6;
   }
@@ -34,33 +34,33 @@
     padding: 0;
   }
   
-  li {
+  .column>ul>li{
     margin-bottom: 10px;
     display: flex;
     align-items: center;
   }
   
-  li svg {
+  .column>ul>li svg {
     margin-right: 10px;
   }
   
-  a {
+  .column>ul>li>a {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s;
   }
   
-  a:hover {
+  .column>ul>li>a:hover {
     color: #ccc;
   }
   
-  .socials a {
+  .socials>a {
     margin-right: 10px;
     font-size: 24px;
     color: #fff;
   }
   
-  .socials a:hover {
+  .socials>a:hover {
     color: #ccc;
   }
   

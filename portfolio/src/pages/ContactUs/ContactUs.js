@@ -11,35 +11,35 @@ const ContactUs = () => {
     return (
         <div className={styles.contactUs}>
             <div className={styles.contactPara}>
+            <h1>Contact Me</h1>
+            <h3>Contact</h3>
+            <p>
+          Experienced React Developer adept at creating and managing web-based software solutions. Skilled in JavaScript and
+          React with 1.5 years of practical experience.
+        </p>
             </div>
 
             <div className={styles.contactMenu}>
                 <div className={styles.contactBox}>
                     <HomeIcon 
-                    sx={{
-                        borderRadius:'50%',
-                        padding:'20px',
-                        backgroundColor:'gray',
-                        
-                    }}
-                    />
+                    className={styles.iconStyles}/>
                     <h3>ADDRESS</h3>
-                    <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+                    <p>Kharghar, Navi-Mumbai</p>
                 </div>
-                <div>
-                    <HomeIcon />
-                    <h3>ADDRESS</h3>
-                    <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+                <div className={styles.contactBox}>
+                    <HomeIcon className={styles.iconStyles} />
+                    <h3>Contact</h3>
+                    <p>+91 8451031535</p>
                 </div>
-                <div>
-                    <HomeIcon />
-                    <h3>ADDRESS</h3>
-                    <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+                <div className={styles.contactBox}>
+                    <HomeIcon className={styles.iconStyles} />
+                    <h3>Website</h3>
+                    <p>attendence.kjssteel.com</p>
                 </div>
-                <div>
-                    <HomeIcon />
+                <div className={styles.contactBox}>
+                    <HomeIcon className={styles.iconStyles} />
                     <h3>ADDRESS</h3>
-                    <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+                    <p></p>
                 </div>
 
             </div>

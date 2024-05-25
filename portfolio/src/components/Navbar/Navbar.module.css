@@ -6,12 +6,10 @@
     background-color: #ffff;
     color: #333;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
-    position: relative; /* Added for mobile responsiveness */
+    position: relative; 
   }
   
-  /* .navbarLogo {
-    font-size: 1.5rem;
-  } */
+ 
   .aa{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
@@ -31,13 +29,8 @@
     color: #333;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    position: relative; /* Added for the underline effect */
+    position: relative; 
   }
-  
-/* Change color on hover */
-  /* .navbarMenu a:hover {
-    color: #007bff; 
-  } */
   
   .navbarMenu>li>a::after {
     content: '';
@@ -46,17 +39,14 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: transparent; /* Initially transparent */
-    transition: background-color 0.3s ease-in-out; /* Added transition effect */
+    background-color: transparent; 
+    transition: background-color 0.3s ease-in-out; 
   }
   
   .navbarMenu>li>a:hover::after {
-    background-color: #007bff; /* Change background color on hover */
+    background-color: #007bff; 
 
 }
-
-  
-  
   .navbarToggle {
     display: none;
     cursor: pointer;
@@ -68,7 +58,7 @@
     justify-content: space-between;
     width: 30px;
     height: 20px;
-    transition: transform 0.3s ease-in-out; /* Added transition for smooth animation */
+    transition: transform 0.3s ease-in-out; 
 
   }
   
@@ -80,15 +70,15 @@
     transition: transform 0.3s ease-in-out;
   }
   .hamburger.active span:nth-child(1) {
-    transform: translateY(10px) rotate(45deg); /* Adjusted for the hamburger icon animation */
+    transform: translateY(10px) rotate(45deg); 
   }
 
   .hamburger.active span:nth-child(2) {
-    opacity: 0; /* Fades out the middle line when menu is active */
+    opacity: 0; 
   }
   
   .hamburger.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg); /* Adjusted for the hamburger icon animation */
+    transform: translateY(-8px) rotate(-45deg); 
   }
   @media (max-width: 768px) {
     .navbarMenu {
