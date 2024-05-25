@@ -1,79 +1,97 @@
 import React, { useState } from 'react';
-import styles from './ContactForm.module.css'; // Adjust the path if necessary
-import * as XLSX from 'xlsx';
-import contactUsImage from '../../images/contactUs.jpg';
+import axios from 'axios';
 
-const ContactForm = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-    });
+function ContactForm() {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phoneNumber: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const formSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formValues = new URLSearchParams();
+    for (const key in formData) {
+      formValues.append(key, formData[key]);
+    }
+
+    try {
+      const res = await axios.post(
+        `https://script.google.com/macros/s/AKfycbyB3KT7eBDEgU6150JK_48GzU2-K5Em1MXQrKhb84anIOJcIC7uOotJ1p5uDivE2sWEAg/exec`,
+        formValues,
+        {
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          }
+        }
+      );
+
+      if (res.status === 200) {
+        alert("Thank You! We will get back to you");
         setFormData({
-            ...formData,
-            [name]: value
+          fullName: '',
+          email: '',
+          phoneNumber: ''
         });
-    };
+      }
+    } catch (error) {
+      alert("Error submitting data");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const data = [
-            ['Name', 'Email', 'Subject', 'Message'],
-            [formData.name, formData.email, formData.subject, formData.message]
-        ];
-        const worksheet = XLSX.utils.aoa_to_sheet(data);
-        const workbook = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
-        XLSX.writeFile(workbook, 'contact_form.xlsx');
-    };
-
-    return (
-        <div className={styles.contactUs}>
-            <div className={styles.imageSection}>
-                <img src={contactUsImage} alt="Contact" className={styles.contactImage} />
-            </div>
-            <div className={styles.formSection}>
-                <form onSubmit={handleSubmit}>
-                    <input 
-                        type="text" 
-                        name="name" 
-                        placeholder="Your Name" 
-                        value={formData.name} 
-                        onChange={handleChange} 
-                        required 
-                    />
-                    <input 
-                        type="email" 
-                        name="email" 
-                        placeholder="Your Email" 
-                        value={formData.email} 
-                        onChange={handleChange} 
-                        required 
-                    />
-                    <input 
-                        type="text" 
-                        name="subject" 
-                        placeholder="Subject" 
-                        value={formData.subject} 
-                        onChange={handleChange} 
-                        required 
-                    />
-                    <textarea 
-                        name="message" 
-                        placeholder="Message" 
-                        value={formData.message} 
-                        onChange={handleChange} 
-                        required 
-                    />
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </div>
-    );
-};
+  return (
+    <div>
+      <header>
+        <form onSubmit={formSubmit}>
+          <div>
+            <label htmlFor="fullName">Full Name:</label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              value={formData.fullName}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="phoneNumber">Phone Number:</label>
+            <input
+              type="tel"
+              id="phoneNumber"
+              name="phoneNumber"
+              value={formData.phoneNumber}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <button type="submit" disabled={isSubmitting}>
+            {isSubmitting ? 'Submitting...' : 'Submit'}
+          </button>
+        </form>
+      </header>
+    </div>
+  );
+}
 
 export default ContactForm;
