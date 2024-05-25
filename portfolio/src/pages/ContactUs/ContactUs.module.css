@@ -6,21 +6,40 @@
     text-align: center;
     text-align: center;
     align-items: center;
+    background-color: #000000;
 
 }
 .contactPara{
     display: flex;
     width: 50%;
     text-align: center;
+    margin: 0px 0px  5% 0px;
+
+   
+flex-direction: column;
+}
+.contactPara>h1{
+    color: #ffff;
+    margin: 0;
+    padding: 0;
+}
+.contactPara>h2{
+    color: #ffff;
+    margin: 0;
+    padding: 0;
+}
+.contactPara>p{
+color: #999999;
 
 }
 
 .contactMenu{
     display: flex;
     justify-content: center;
-    width: 70%;
+    width: 80%;
     text-align: center;
     gap: 10%;
+    flex-wrap: wrap;
 
 }
 .contactBox{
@@ -28,6 +47,19 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    color: #ffff;
+    width: 15%;
 
-
+}
+.contactBox>p{
+    color: #999999;
+    ;
+}
+.icons{
+    font-size: 50px;
+    border-radius:50%;
+    padding:20px;
+    background-color:rgba(255, 255, 255, 0.1);
+    padding: 30px;
 }

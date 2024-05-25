@@ -1,0 +1,65 @@
+/* src/HomePage.module.css */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    position: relative;
+  }
+  
+  .textContainer {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .hello {
+    color: #ffcd38;
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .title {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .highlight {
+    color: #ffcd38;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .hireButton,
+  .worksButton {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .hireButton {
+    background-color: #ffcd38;
+    color: black;
+  }
+  
+  .worksButton {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .image {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    right: 0;
+  }
+  
