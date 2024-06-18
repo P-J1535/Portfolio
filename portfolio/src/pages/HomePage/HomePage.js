@@ -3,17 +3,11 @@ import React, { useState, useEffect } from 'react';
 import styles from './HomePage.module.css';
 
 
-
-
- 
-
-  
-
 const HomePage = () => {
 
 const slides = [
     {
-      text: "Hello! I'm a web designer based in London",
+      text: "Hello! I'm a web designer based in Kharghar",
       image: "path_to_your_image1.jpg",
     },
     {

@@ -45,7 +45,6 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.copyright}>
-        <p>Copyright ©2024 All rights reserved | This template is made with <Favorite className={styles.heart} /> by Colorlib</p>
       </div>
     </footer>
   );

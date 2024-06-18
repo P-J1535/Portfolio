@@ -12,14 +12,17 @@ const ContactUs = () => {
         <div className={styles.contactUs}>
             <div className={styles.contactPara}>
             <h1>Contact Me</h1>
-            <h2>Contact</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia
-            </p>
 
+            <h3>Contact</h3>
+            <p>
+          Experienced React Developer adept at creating and managing web-based software solutions. Skilled in JavaScript and
+          React with 1.5 years of practical experience.
+        </p>
             </div>
 
             <div className={styles.contactMenu}>
                 <div className={styles.contactBox}>
+
                     <HomeIcon className={styles.icons} />
                     <h3>ADDRESS</h3>
                     <p>Kharghar, Navi-Mumbai</p>
@@ -42,8 +45,7 @@ const ContactUs = () => {
                     <HomeIcon className={styles.icons} />
                     <h3>Website</h3>
                     <p>www.attedenceportal.com</p>
-                </div>
-
+</div>
 
             </div>
 
