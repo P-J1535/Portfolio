@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .imageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profileImage {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .infoContainer {
+    flex: 2;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin: 0;
+  }
+  
+  .subtitle {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .infoList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .infoList li {
+    margin: 5px 0;
+  }
+  
+  .projectsCompleted {
+    margin: 20px 0;
+    font-size: 1.5em;
+    color: #ffd700; /* Gold color */
+  }
+  
+  .downloadButton {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #ff5722; /* Orange color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  .downloadButton:hover {
+    background-color: #e64a19; /* Darker orange */
+  }
+  

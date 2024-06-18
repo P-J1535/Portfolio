@@ -6,45 +6,23 @@
     text-align: center;
     text-align: center;
     align-items: center;
-    background-color: #000000;
-gap: 30px;
+
 }
 .contactPara{
     display: flex;
     flex-direction: column;
     width: 50%;
     text-align: center;
-   
 
 }
-.contactPara>h1{
-color: #ffff;
 
-font-weight: 800;
-font-size: 50px;
-}
-
-.contactPara>h3{
-    color: rgba(255, 255, 255, 0.1);
-    position: absolute;
-    left: 35%;
-    font-size: 100px;
-    z-index: 50;
-    bottom: -65%;
-    font-weight: 900;
-}
-.contactPara>p{
-    color: #999999;
-    padding: 0;
-    margin: 0;
-    font-weight: 600;
-}
 .contactMenu{
     display: flex;
     justify-content: center;
-    width: 70%;
+    width: 80%;
     text-align: center;
     gap: 10%;
+    flex-wrap: wrap;
 
 }
 .contactBox{
@@ -52,15 +30,6 @@ font-size: 50px;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-}
-.contactBox>h3{
-    color: #ffff;
-}
-.contactBox>p{
-    color: #ffff;
-}
-.iconStyles{
-    border-radius: 50%;
-    padding: 20px;
-    background-color: #99999999;
+
+
 }
